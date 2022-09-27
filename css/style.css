@@ -86,6 +86,7 @@ body {
 .dynamic-txts li span::after{
     content: "";
     position: absolute;
+    top: 2px;
     left: 0;
     height: 100%;
     width: 100%;
