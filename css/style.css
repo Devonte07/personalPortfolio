@@ -1,0 +1,124 @@
+/* 
+    primary font color #F5F3F3
+    secondary font #E9603A
+    background color #0F0A0A
+*/
+{
+    box-sizing: border-box;
+}
+
+:root {
+    --prim: #F5F3F3;
+    --sec: #E9603A;
+    --bgColor: #0F0A0A;
+}
+
+    #pointer-link {
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--bgColor);
+    /* background-image: url(../media/portfolio_logo.png); */
+}
+
+
+.nav-link {
+    color:var(--prim);
+    /* border-radius: 10px; */
+}
+
+.nav-link:hover {
+    color:var(--sec);
+    border-bottom: solid 1px var(--sec);
+    /* background-color: var(--sec); */
+}
+
+.nav-icons {
+    margin-right: 10px;
+}
+
+.logo {
+    margin-left: 40px;
+}
+
+
+.intro {
+    margin-top: 60px;
+}
+
+.intro .static-txt{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--prim);
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.intro .dynamic-txts{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 85px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.dynamic-txts li{
+    list-style: none;
+    color: var(--sec);
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+    top: -360px;
+    }
+}
+
+.dynamic-txts li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+}
+
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--bgColor);
+    border-left: 2px solid var(--sec);
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+    40%, 60%{
+    left: calc(100% + 30px);
+    }
+    100%{
+    left: 0;
+    }
+}
+
+.hero-img {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    border: 1px solid var(--sec);
+    border-radius: 100%;
+}
+
+img {
+    opacity: 0.8;
+}
+
+.bottom-nav-link {
+    color: var(--prim);
+    margin-right: 20px;
+}
+
+.bottom-nav-link:hover {
+    color: var(--sec);
+}
