@@ -23,6 +23,25 @@ body {
 }
 
 
+header {
+    margin-top: 40px;
+}
+
+h1{
+    color: var(--prim);
+    margin-top: 10px;
+    font-family: 'Abyssinica SIL', serif;
+}
+
+h2, h3{
+    color: var(--prim);
+    font-family: 'Abyssinica SIL', serif;
+}
+
+.nav {
+    padding-left: 60px;
+}
+
 .nav-link {
     color:var(--prim);
     /* border-radius: 10px; */
@@ -31,7 +50,7 @@ body {
 .nav-link:hover {
     color:var(--sec);
     border-bottom: solid 1px var(--sec);
-    /* background-color: var(--sec); */
+    /* background-color: var(--prim); */
 }
 
 .nav-icons {
@@ -40,13 +59,14 @@ body {
 
 .logo {
     margin-left: 40px;
+    margin-top: 40px;
 }
 
 
 .intro {
     margin-top: 60px;
 }
-
+ /* Animation code credited to https://youtu.be/m0o0QNpY9-0 */
 .intro .static-txt{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: var(--prim);
@@ -89,7 +109,7 @@ body {
     top: 2px;
     left: 0;
     height: 100%;
-    width: 100%;
+    width: 600px;
     background: var(--bgColor);
     border-left: 2px solid var(--sec);
     animation: typing 3s steps(10) infinite;
@@ -104,15 +124,15 @@ body {
     }
 }
 
+/* end of animation */
+
 .hero-img {
     margin-top: 50px;
     margin-bottom: 100px;
     border: 1px solid var(--sec);
     border-radius: 100%;
-}
-
-img {
-    opacity: 0.8;
+    background-color: var(--bgColor);
+    background-image: url(../media/bg_img.png);
 }
 
 .bottom-nav-link {
@@ -122,4 +142,166 @@ img {
 
 .bottom-nav-link:hover {
     color: var(--sec);
+}
+
+.section1{
+    margin-top: 20px;
+    /* opacity: 0.8; */
+}
+
+.contacts a {
+    color: var(--prim);
+}
+
+.colophon {
+    color: var(--prim);
+}
+
+.footer {
+    margin-top: 40px;
+}
+
+/* 
+About page 
+*/
+
+.section2 {
+    margin-top: 40px;
+}
+
+.section3 {
+    /* background-color: var(--sec); */
+    margin-top: 40px;
+}
+
+.about-section {
+    color: var(--prim);
+    margin-top: 100px;
+    border: 1px solid var(--sec);
+    background-color: var(--bgColor);
+}
+
+.about-section2 {
+    color: var(--prim);
+    margin-top: 100px;
+    border: 1px solid var(--sec);
+    background-color: var(--bgColor);
+}
+
+.about-image {
+    border-radius: 60%;
+}
+
+.hero-content{
+    width: calc(300px (2000 - 300) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.contact-section {
+    margin-top: 60px;
+    border: 1px solid var(--sec);
+}
+
+.contact-content {
+    color: var(--sec);
+}
+
+.contact-content1 {
+    color: var(--prim);
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.text {
+    padding: 10px;
+}
+
+.proj_h2 {
+    color: var(--bgColor);
+}
+
+/* cards animation credit to https://youtu.be/7glClI-rj74 */
+
+.book {
+    max-width: 1000px;
+    display: flex;
+    margin: 100px auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    position: relative;
+    margin: 20px 0;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    transform-style: preserve-3d; /*allows to move in 3d-space that gives that open book effect*/
+    transform: perspective(2000px);
+    transition: 1s; /*how fast it rotates*/
+    box-shadow: inset 300px 0 50px rgba(0,0,0,.5);
+}
+
+.card:hover {
+    z-index: 1000;
+    transform: perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0,0,0,.5);
+}
+
+.card .imgBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+}
+
+.card:hover .imgBox {
+    transform: rotateY(-135deg);
+}
+
+.card .imgBox .img-proj {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.my-btn:hover, .my-btn:focus {
+    color: var(--bgColor);
+    background-color: var(--prim);
+    border: 1px solid var(--sec);
+    box-shadow: 0 8px 8px -6.4px var(--sec);
+    transform: translateY(-0.25em);
+}
+
+
+.mobile-h2{
+    font-size: 20px;
+    margin-top: 40px;
+    color: var(--sec);
+}
+
+.mobile-text {
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: 30px;
+    color: var(--prim);
+    letter-spacing: 6px;
+    -webkit-box-reflect: above -30px linear-gradient(transparent, rgba(225,225,225,0.3));
+    
 }
