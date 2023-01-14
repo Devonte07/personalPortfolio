@@ -78,7 +78,7 @@ h2, h3{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 85px;
     line-height: 90px;
-    overflow: hidden;
+    overflow: hidden; /* hides the text */
 }
 
 .dynamic-txts li{
